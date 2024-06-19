@@ -1,6 +1,6 @@
 #include<iostream>
 #include<string>
-#include"Student.h" //its been a fuckin hour trying to solve this <Student.h> is should be "Student.h"
+#include"Student.h" //its been a fuckin hour trying to solve this <Student.h> it should be "Student.h"
 using namespace std;
 int main (){
     Student account1{"Amr Khaled",99};
