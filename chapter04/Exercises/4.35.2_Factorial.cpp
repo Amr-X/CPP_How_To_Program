@@ -7,7 +7,7 @@ int main(){
    cout << "Press anything to calulate e (euler's number): ";
    int garbage;
    cin >> garbage;
-   while (counter <= counterend ){ // increase counterend for more precise e value
+   while (counter <= counterend ){ // increase counterend for more precise e valuedrfg
     factorial *= counter;
     e += (1/static_cast<double>(factorial));
     counter++;
