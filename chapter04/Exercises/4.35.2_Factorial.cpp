@@ -10,7 +10,7 @@ int main(){
    while (counter <= counterend ){ // increase counterend for more precise e valuedrfg
     factorial *= counter;
     e += (1/static_cast<double>(factorial));
-    counter++;
+    counter++; 
    } 
    cout << e<<endl;
 
