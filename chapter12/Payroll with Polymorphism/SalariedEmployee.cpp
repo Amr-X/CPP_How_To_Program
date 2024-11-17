@@ -1,0 +1,34 @@
+// SalariedEmployee class member-function definitions.
+#include "SalariedEmployee.h"
+#include <iomanip>
+#include <sstream>
+#include <stdexcept>
+
+using namespace std;
+
+SalariedEmployee::SalariedEmployee(const string &first, const string &last,
+                                   const string &ssn, double salary)
+    : Employee(first, last, ssn) {
+  setWeeklySalary(salary); // Add You Own.
+}
+
+void SalariedEmployee::setWeeklySalary(double salary) {
+  if (salary < 0.0) {
+    throw invalid_argument("Weekly salary must be >= 0.0");
+  }
+
+  weeklySalary = salary;
+}
+
+double SalariedEmployee::getWeeklySalary() const { return weeklySalary; }
+
+double SalariedEmployee::earnings() const { return getWeeklySalary(); }
+
+string SalariedEmployee::toString() const {
+  ostringstream output;
+  output << fixed << setprecision(2);
+  output << "salaried employee: "
+         << Employee::toString() //! Reuse abstract base-class function
+         << "\nweekly salary: " << getWeeklySalary();
+  return output.str();
+}
