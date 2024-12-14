@@ -1,15 +1,14 @@
 #include<iostream> 
-using namespace std; 
+
 
 int main(){
-    int product{1};
+      double product{1};
     
-    for (int counter{3};counter <=50;counter+=3)
-    {
-        product *= counter;
+    for(int i{3};i<=50;i+=3){
+        product *= i;
     }
 
-    cout <<"Product of Muliples Of 3\n"
-    << "From Range 3 to 50 is: "<<product<<endl;
+    std::cout <<"Product of Multiples Of 3\n"
+    << "From Range 3 to 50 is: "<< product << std::endl;
 
 }

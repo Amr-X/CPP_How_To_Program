@@ -1,39 +1,31 @@
-#include<iostream> 
-#include<climits>
-using namespace std; 
+#include <iostream>
 
-int main(){
-    int counter{1},numbercount{0},inputnumber{0};
-    cout << "Enter How Many Number to Enter: ";
-    cin >> numbercount;
+int main() {
+    std::cout << "Enter how many numbers to enter: ";
+    int numCount{};
+    std::cin >> numCount;
 
-    if (numbercount>0){
-        //just for first time
-        cout<< "> ";
-        cin>> inputnumber;
-        int smallest = inputnumber;
-
-
-        while(counter <numbercount){
-            cout<< "> ";
-            
-            cin>> inputnumber;
-
-            if(inputnumber<=smallest)
-            {
-            smallest = inputnumber;
-            }
-            counter++;
-            }
-
-            
-
-            cout << "\n"<< smallest;
+    if (numCount <= 0) {
+        std::cout << "Please enter a positive number of values." << std::endl;
+        return 1;  
     }
 
-    else{
-        cout << "Invalid!";
-    }
-    
+    int num{};
+    std::cout << "Enter a number: ";
+    std::cin >> num;
+    int smallest = num;  
 
+
+    for (int i = 1; i < numCount; ++i) {
+        std::cout << "Enter a number: ";
+        std::cin >> num;
+        if (num < smallest) {
+            smallest = num;  
+        }
+    }
+
+    std::cout << "The smallest number is: " << smallest << std::endl;
+
+    return 0;
 }
+

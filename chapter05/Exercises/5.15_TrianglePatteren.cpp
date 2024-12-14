@@ -11,7 +11,7 @@ int main(){
     }
     cout<<"\n\n";
 
-//////////////////////////////////////////////////////////////
+
     for(int n{1};n<=10;n++){
         for (int counter =1;counter <=n;counter++){
         cout << "*";
@@ -20,6 +20,14 @@ int main(){
     }
         cout<<"\n\n";
 
-//////////////////////////////////////////////////////////////
+    for(int i{10};i > 0;i--){
+        std::string str{};
+        for(int j{1};j <= i;j++){
+            str +='*';
+        }
+     std::cout.width(10);
+     std::cout << str << std::endl;  
+    }
+
    
 }
